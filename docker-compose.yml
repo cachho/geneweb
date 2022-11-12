@@ -1,0 +1,25 @@
+version: "3.7"
+
+networks:
+    internal-net:
+        name: internal-net
+        driver: bridge
+    nginx-reverse-proxy-manager-network:
+        name: nginx-reverse-proxy-manager-network
+        external: true
+        driver: bridge
+
+services:
+    geneweb:
+        image: callumgare/geneweb:latest
+        container_name: geneweb
+        hostname: geneweb
+        networks:
+            - internal-net
+        volumes:
+            - ./geneweb-data:/geneweb/bases
+        ports:
+            - 2316:2316
+            - 2317:2317
+        restart: always
+
