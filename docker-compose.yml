@@ -16,6 +16,7 @@ services:
         hostname: geneweb
         networks:
             - internal-net
+            - nginx-proxy-manager-network
         volumes:
             - ./geneweb-data:/geneweb/bases
         ports:
