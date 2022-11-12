@@ -19,6 +19,8 @@ services:
             - nginx-reverse-proxy-manager-network
         volumes:
             - ./geneweb-data:/geneweb/bases
+            - ${PWD}/config/only.txt:/geneweb/gw/only.txt
+            - ${PWD}/config/gwd.xcl:/geneweb/gw/gwd.xcl
         ports:
             - 2316:2316
             - 2317:2317
