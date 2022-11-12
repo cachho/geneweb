@@ -1,2 +1,2 @@
 #!/bin/bash
-chown -R 999:999 geneweb-data
+sudo chown -R 999:999 geneweb-data
