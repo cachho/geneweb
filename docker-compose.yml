@@ -19,6 +19,7 @@ services:
             - nginx-reverse-proxy-manager-network
         volumes:
             - ./geneweb-data:/geneweb/bases
+            - ./exchange:/exchange
             - type: bind
               source: ./config/only.txt
               target: /geneweb/gw/only.txt
