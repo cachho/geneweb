@@ -9,6 +9,7 @@ This is a docker-compose variant to run geneweb and gwsetup. It uses the monthly
 Once you have a database, gwsetup doesn't auto-start anymore. In order to use it (to create more databases or backups), open your container with `docker exec -it geneweb bash` and execute one of the following commands:
 - `sh start_setup.sh` to start the gwsetup service in your session. 
 - `sh start_setup_daemon.sh` to start the gwsetup service as a daemon
+
 **ATTENTION!**
 If you followed the instructions above and setup the `only.txt` to the *nginx proxy manager* ip, the gwsetup service will be publicly accessible, as you effectivly circumenvented the security mechanism of `only.txt`. You should definitely setup an *access list* in *nginx proxy manager* to secure your service. Same goes for your geneweb on port 2316.
 
