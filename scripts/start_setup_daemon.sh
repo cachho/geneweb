@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /geneweb/gw/
-./gwsetup -lang=en
+./gwsetup -lang=en -daemon
