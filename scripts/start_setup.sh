@@ -1,2 +1,2 @@
 #!/bin/bash
-sh /geneweb/gw/setup.sh
+sh /geneweb/gw/gwsetup
