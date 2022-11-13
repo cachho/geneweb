@@ -27,10 +27,8 @@ services:
             - type: bind
               source: ./config/gwd.xcl
               target: /geneweb/gw/gwd.xcl
+        working_dir: /geneweb
         ports:
             - 2316:2316
             - 2317:2317
         restart: always
-        working_dir: /geneweb
-        command: sh -c "echo "Starting setup on port 2316" && ./scripts/start_setup.sh"
-
