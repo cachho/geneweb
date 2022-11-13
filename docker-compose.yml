@@ -20,13 +20,18 @@ services:
         volumes:
             - ./geneweb-data:/geneweb/bases
             - ./exchange:/exchange
-            - ./scripts:/geneweb/scripts
             - type: bind
               source: ./config/only.txt
               target: /geneweb/gw/only.txt
             - type: bind
               source: ./config/gwd.xcl
               target: /geneweb/gw/gwd.xcl
+            - type: bind
+              source: ./scripts/start_setup.sh
+              target: /geneweb/start_setup.sh
+            - type: bind
+              source: ./scripts/start_setup_daemon.sh
+              target: /geneweb/start_setup_daemon.sh
         working_dir: /geneweb
         ports:
             - 2316:2316
