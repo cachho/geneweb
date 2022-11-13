@@ -20,6 +20,7 @@ services:
         volumes:
             - ./geneweb-data:/geneweb/bases
             - ./exchange:/exchange
+            - ./scripts:/geneweb/scripts
             - type: bind
               source: ./config/only.txt
               target: /geneweb/gw/only.txt
@@ -30,4 +31,6 @@ services:
             - 2316:2316
             - 2317:2317
         restart: always
+        working_dir: /geneweb
+        command: ['sh', './scripts/start_setup.sh']
 
